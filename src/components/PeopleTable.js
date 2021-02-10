@@ -27,35 +27,35 @@ class PeopleTable extends Component {
 		const columnsPeople = [
 			{
 				Header: "Jméno",
-				accessor: 'celkemKg',
+				accessor: 'firstName',
 				className: 'text-center',
 				filterable: false,
 				sortable: false
 			},
 			{
 				Header: "Příjmení",
-				accessor: 'celkemKc',
+				accessor: 'secondName',
 				className: 'text-center',
 				filterable: false,
 				sortable: false
 			},
 			{
 				Header: "Věk",
-				accessor: 'celkemSkutecneKg',
+				accessor: 'age',
 				className: 'text-center',
 				filterable: false,
 				sortable: false
 			},
 			{
 				Header: "Pohlaví",
-				accessor: 'celkemSkutecneKc',
+				accessor: 'sex',
 				className: 'text-center',
 				filterable: false,
 				sortable: false
 			},
 			{
 				Header: "Email",
-				accessor: 'datum',
+				accessor: 'email',
 				className: 'text-center',
 				filterable: false
 			},
