@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
 import {Card, CardBody, CardHeader} from 'reactstrap';
-import PeopleService from "../service/PeopleService";
 import {getPeople} from "../actions/peopleService";
 
 
@@ -72,16 +71,12 @@ class PeopleTable extends Component {
 				<div>
 					<div className="row">
 					<Card className="m-3 animated fadeIn">
-						<CardHeader>
-							<h1 className="text-center">Seznam lidí</h1>
-						</CardHeader>
 						<CardBody>
 							<ReactTable
 									style={{cursor: 'pointer'}}
 									showPagination={true}
-									data={[]}
+									data={this.state.people}
 									columns={columnsPeople}
-									defaultPageSize={[]}
 									previousText={"Zpět"}
 									nextText={"Dále"}
 									pageText={"Stránka"}
@@ -91,7 +86,6 @@ class PeopleTable extends Component {
 									sortable
 							/>
 						</CardBody>
-
 					</Card>
 					</div>
 				</div>
