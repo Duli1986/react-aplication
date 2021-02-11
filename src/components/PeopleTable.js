@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactTable from "react-table";
-import 'react-table/react-table.css'
 import {Card, CardBody, CardHeader} from 'reactstrap';
 import {getPeople} from "../actions/peopleService";
 
