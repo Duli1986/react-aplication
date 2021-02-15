@@ -1,9 +1,18 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {columnsPeople} from "./columns";
 import '../table.css';
 import {useTable} from "react-table";
+import {getPeoples} from "../searchPeople/actions";
+import {useDispatch, useSelector} from "react-redux";
+import {getPeopleResult} from "../searchPeople/selectors";
 
 export const PeopleList = () => {
+
+	useEffect(async () => {
+		await getPeoples();
+	}, []);
+
+	const peopleResults = useSelector(getPeopleResult) || [];
 	const columns = useMemo(() => columnsPeople, [])
 
 	const {
@@ -12,9 +21,9 @@ export const PeopleList = () => {
 		headerGroups,
 		rows,
 		prepareRow,
-	} = useTable({
+	} = useTable ({
 		columns: columns,
-		data: [],
+		data: peopleResults,
 	})
 
 	return (
