@@ -5,7 +5,6 @@ import { combineReducers } from 'redux';
 import searchSuccessReducer from '../searchPeople/reducers';
 
 const rootReducer = combineReducers({
-	urls: dummyReducer,
 	peopleResult: searchSuccessReducer,
 });
 

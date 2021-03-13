@@ -39,17 +39,16 @@ export const PeopleList = () => {
 				))}
 				</thead>
 				<tbody {...getTableBodyProps()}>
-				{rows.map((row) => {
+				{rows.map((row, i) => {
 					prepareRow(row)
 					return (
 							<tr {...row.getRowProps()}>
-								{row.cell.map((cell) => {
+								{row.cells.map(cell => {
 									return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
 								})}
 							</tr>
 					)
-				})
-				}
+				})}
 				</tbody>
 			</table>
 	);

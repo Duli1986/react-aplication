@@ -1,4 +1,4 @@
-import {actionTypes} from "../actions/constants";
+import {actionTypes} from "./constants";
 
 const initialState = {
 	list: [],

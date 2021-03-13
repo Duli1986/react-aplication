@@ -1,5 +1,4 @@
 import log from 'loglevel';
-import {getPeople} from "./peopleService";
 import {getPeoples} from "../searchPeople/actions";
 
 export default async (dispatch) => {

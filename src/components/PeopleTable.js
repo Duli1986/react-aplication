@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactTable from "react-table";
 import {Card, CardBody, CardHeader} from 'reactstrap';
-import {getPeople} from "../actions/peopleService";
 
 
 class PeopleTable extends Component {
@@ -12,12 +11,6 @@ class PeopleTable extends Component {
 			people: []
 
 		}
-	}
-
-	componentDidMount() {
-		getPeople().then((res) => {
-			this.setState({people: res.data})
-		})
 	}
 
 	render() {
